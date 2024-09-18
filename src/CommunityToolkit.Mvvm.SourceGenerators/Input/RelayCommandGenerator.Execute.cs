@@ -215,7 +215,7 @@ partial class RelayCommandGenerator
             // private <COMMAND_TYPE>? <COMMAND_FIELD_NAME>;
             FieldDeclarationSyntax fieldDeclaration =
                 FieldDeclaration(
-                VariableDeclaration(NullableType(IdentifierName(commandClassTypeName)))
+                VariableDeclaration(NullableType(IdentifierName(commandInterfaceTypeName)))
                 .AddVariables(VariableDeclarator(Identifier(commandInfo.FieldName))))
                 .AddModifiers(Token(SyntaxKind.PrivateKeyword))
                 .AddAttributeLists(
